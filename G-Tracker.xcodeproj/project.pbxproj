@@ -8,20 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		847062D021F143BE00D55C98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847062CF21F143BE00D55C98 /* AppDelegate.swift */; };
-		847062D221F143BE00D55C98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847062D121F143BE00D55C98 /* ViewController.swift */; };
+		847062D221F143BE00D55C98 /* AddCarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847062D121F143BE00D55C98 /* AddCarController.swift */; };
 		847062D521F143BE00D55C98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847062D321F143BE00D55C98 /* Main.storyboard */; };
 		847062D721F143BF00D55C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847062D621F143BF00D55C98 /* Assets.xcassets */; };
 		847062DA21F143BF00D55C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847062D821F143BF00D55C98 /* LaunchScreen.storyboard */; };
+		84BE4AAD21F1F8FD00259D78 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE4AAC21F1F8FD00259D78 /* RealmManager.swift */; };
+		84BE4AAF21F1FF1D00259D78 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE4AAE21F1FF1D00259D78 /* MapController.swift */; };
+		84BE4AB121F224BA00259D78 /* CarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE4AB021F224BA00259D78 /* CarsController.swift */; };
+		84BE4AB621F226AE00259D78 /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BE4AB421F226AE00259D78 /* ChannelCell.xib */; };
+		84BE4AB721F226AE00259D78 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE4AB521F226AE00259D78 /* ChannelCell.swift */; };
+		84CF594021F17BA500ED9EE4 /* ACFloatingTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF593F21F17BA500ED9EE4 /* ACFloatingTextfield.swift */; };
+		84CF594321F17FDA00ED9EE4 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF594221F17FDA00ED9EE4 /* Feed.swift */; };
+		84CF594521F1801E00ED9EE4 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF594421F1801E00ED9EE4 /* Channel.swift */; };
+		84CF594721F181D200ED9EE4 /* ThingSpeakResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF594621F181D200ED9EE4 /* ThingSpeakResponse.swift */; };
+		84CF594921F1872700ED9EE4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF594821F1872700ED9EE4 /* APIClient.swift */; };
+		F0CAB96C8A342221DA71AED7 /* Pods_G_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53CBE9B1A4FF85BEB569E03 /* Pods_G_Tracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		004A76BCC755EBFFC6DA3541 /* Pods-G-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Tracker.release.xcconfig"; path = "Target Support Files/Pods-G-Tracker/Pods-G-Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		3CB775F2EF809A4512356EC4 /* Pods-G-Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Tracker.debug.xcconfig"; path = "Target Support Files/Pods-G-Tracker/Pods-G-Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		847062CC21F143BE00D55C98 /* G-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "G-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847062CF21F143BE00D55C98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		847062D121F143BE00D55C98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		847062D121F143BE00D55C98 /* AddCarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarController.swift; sourceTree = "<group>"; };
 		847062D421F143BE00D55C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		847062D621F143BF00D55C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847062D921F143BF00D55C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847062DB21F143BF00D55C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84BE4AAC21F1F8FD00259D78 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		84BE4AAE21F1FF1D00259D78 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		84BE4AB021F224BA00259D78 /* CarsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsController.swift; sourceTree = "<group>"; };
+		84BE4AB421F226AE00259D78 /* ChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChannelCell.xib; path = "G-Tracker/ChannelCell.xib"; sourceTree = SOURCE_ROOT; };
+		84BE4AB521F226AE00259D78 /* ChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChannelCell.swift; path = "G-Tracker/ChannelCell.swift"; sourceTree = SOURCE_ROOT; };
+		84CF593F21F17BA500ED9EE4 /* ACFloatingTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACFloatingTextfield.swift; sourceTree = "<group>"; };
+		84CF594221F17FDA00ED9EE4 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		84CF594421F1801E00ED9EE4 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		84CF594621F181D200ED9EE4 /* ThingSpeakResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingSpeakResponse.swift; sourceTree = "<group>"; };
+		84CF594821F1872700ED9EE4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A53CBE9B1A4FF85BEB569E03 /* Pods_G_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_G_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CAB96C8A342221DA71AED7 /* Pods_G_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		625D5B779345FEFF8B80D2DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CB775F2EF809A4512356EC4 /* Pods-G-Tracker.debug.xcconfig */,
+				004A76BCC755EBFFC6DA3541 /* Pods-G-Tracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		847062C321F143BE00D55C98 = {
 			isa = PBXGroup;
 			children = (
 				847062CE21F143BE00D55C98 /* G-Tracker */,
 				847062CD21F143BE00D55C98 /* Products */,
+				625D5B779345FEFF8B80D2DD /* Pods */,
+				D87DB46F4E43DCDE7EE956B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +90,72 @@
 		847062CE21F143BE00D55C98 /* G-Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				84BE4AB321F2268300259D78 /* views */,
+				84BE4AB221F2267200259D78 /* controllers */,
+				84BE4AAB21F1F4EF00259D78 /* resources */,
+				84BE4AAA21F1F4E700259D78 /* api */,
+				84BE4AA921F1F4D900259D78 /* model */,
+				84CF593F21F17BA500ED9EE4 /* ACFloatingTextfield.swift */,
 				847062CF21F143BE00D55C98 /* AppDelegate.swift */,
-				847062D121F143BE00D55C98 /* ViewController.swift */,
-				847062D321F143BE00D55C98 /* Main.storyboard */,
+			);
+			path = "G-Tracker";
+			sourceTree = "<group>";
+		};
+		84BE4AA921F1F4D900259D78 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				84CF594221F17FDA00ED9EE4 /* Feed.swift */,
+				84CF594421F1801E00ED9EE4 /* Channel.swift */,
+				84CF594621F181D200ED9EE4 /* ThingSpeakResponse.swift */,
+				84BE4AAC21F1F8FD00259D78 /* RealmManager.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		84BE4AAA21F1F4E700259D78 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				84CF594821F1872700ED9EE4 /* APIClient.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		84BE4AAB21F1F4EF00259D78 /* resources */ = {
+			isa = PBXGroup;
+			children = (
 				847062D621F143BF00D55C98 /* Assets.xcassets */,
 				847062D821F143BF00D55C98 /* LaunchScreen.storyboard */,
 				847062DB21F143BF00D55C98 /* Info.plist */,
 			);
-			path = "G-Tracker";
+			path = resources;
+			sourceTree = "<group>";
+		};
+		84BE4AB221F2267200259D78 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				847062D121F143BE00D55C98 /* AddCarController.swift */,
+				84BE4AAE21F1FF1D00259D78 /* MapController.swift */,
+				84BE4AB021F224BA00259D78 /* CarsController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		84BE4AB321F2268300259D78 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				84BE4AB521F226AE00259D78 /* ChannelCell.swift */,
+				84BE4AB421F226AE00259D78 /* ChannelCell.xib */,
+				847062D321F143BE00D55C98 /* Main.storyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		D87DB46F4E43DCDE7EE956B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A53CBE9B1A4FF85BEB569E03 /* Pods_G_Tracker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 847062DE21F143BF00D55C98 /* Build configuration list for PBXNativeTarget "G-Tracker" */;
 			buildPhases = (
+				EF6816E361354D89184400AB /* [CP] Check Pods Manifest.lock */,
 				847062C821F143BE00D55C98 /* Sources */,
 				847062C921F143BE00D55C98 /* Frameworks */,
 				847062CA21F143BE00D55C98 /* Resources */,
+				82C30E920EA6F0B07D2DA70A /* [CP] Embed Pods Frameworks */,
+				84CF594121F17E8A00ED9EE4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -123,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				847062DA21F143BF00D55C98 /* LaunchScreen.storyboard in Resources */,
+				84BE4AB621F226AE00259D78 /* ChannelCell.xib in Resources */,
 				847062D721F143BF00D55C98 /* Assets.xcassets in Resources */,
 				847062D521F143BE00D55C98 /* Main.storyboard in Resources */,
 			);
@@ -130,12 +228,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		82C30E920EA6F0B07D2DA70A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-G-Tracker/Pods-G-Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/DTPhotoViewerController/DTPhotoViewerController.framework",
+				"${BUILT_PRODUCTS_DIR}/FTIndicator/FTIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/NSDate+TimeAgo/NSDate_TimeAgo.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTPhotoViewerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSDate_TimeAgo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-G-Tracker/Pods-G-Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84CF594121F17E8A00ED9EE4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"\n\n";
+		};
+		EF6816E361354D89184400AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-G-Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		847062C821F143BE00D55C98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847062D221F143BE00D55C98 /* ViewController.swift in Sources */,
+				847062D221F143BE00D55C98 /* AddCarController.swift in Sources */,
+				84BE4AAD21F1F8FD00259D78 /* RealmManager.swift in Sources */,
+				84CF594921F1872700ED9EE4 /* APIClient.swift in Sources */,
+				84CF594521F1801E00ED9EE4 /* Channel.swift in Sources */,
+				84CF594321F17FDA00ED9EE4 /* Feed.swift in Sources */,
+				84CF594021F17BA500ED9EE4 /* ACFloatingTextfield.swift in Sources */,
+				84CF594721F181D200ED9EE4 /* ThingSpeakResponse.swift in Sources */,
+				84BE4AB721F226AE00259D78 /* ChannelCell.swift in Sources */,
+				84BE4AAF21F1FF1D00259D78 /* MapController.swift in Sources */,
+				84BE4AB121F224BA00259D78 /* CarsController.swift in Sources */,
 				847062D021F143BE00D55C98 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,11 +473,13 @@
 		};
 		847062DF21F143BF00D55C98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB775F2EF809A4512356EC4 /* Pods-G-Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97XB8J435J;
-				INFOPLIST_FILE = "G-Tracker/Info.plist";
+				INFOPLIST_FILE = "G-Tracker/resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +493,13 @@
 		};
 		847062E021F143BF00D55C98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 004A76BCC755EBFFC6DA3541 /* Pods-G-Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97XB8J435J;
-				INFOPLIST_FILE = "G-Tracker/Info.plist";
+				INFOPLIST_FILE = "G-Tracker/resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ey4-1b-Ylm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Myndraine.otf">
+            <string>Myndraine</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Add a Car-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Add a Car" id="BYZ-38-t0r" customClass="AddCarController" customModule="G_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Car Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fil-HW-f7J" customClass="ACFloatingTextfield" customModule="G_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="16" y="84" width="343" height="45"/>
+                                <accessibility key="accessibilityConfiguration" hint="Email or Username" identifier="Email or Username" label="Email or Username"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="JVQ-Ax-PGX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="263" id="Xac-eg-ARi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="0.53333333329999999" green="0.1529411765" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedPlaceHolderColor">
+                                        <color key="value" red="0.53333333329999999" green="0.1529411765" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                        <color key="value" red="0.7843137255" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                        <color key="value" red="0.7843137255" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Secret Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Byc-Zx-mgo" customClass="ACFloatingTextfield" customModule="G_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="16" y="157" width="343" height="45"/>
+                                <accessibility key="accessibilityConfiguration" hint="Email or Username" identifier="Email or Username" label="Email or Username"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="sf9-Td-1XS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="263" id="wqp-5o-DIt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" red="0.53333333329999999" green="0.1529411765" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedPlaceHolderColor">
+                                        <color key="value" red="0.53333333329999999" green="0.1529411765" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="errorTextColor">
+                                        <color key="value" red="0.7843137255" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="errorLineColor">
+                                        <color key="value" red="0.7843137255" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9m-Rg-dZX">
+                                <rect key="frame" x="16" y="232" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.74901960779999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="log in" label="log in"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ehk-fM-ceg"/>
+                                    <constraint firstAttribute="height" constant="50" id="gUM-Ya-GjV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.99987119440000005" green="0.99998223779999995" blue="0.99984109399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Add Car">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addCar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sOF-NN-LNP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fil-HW-f7J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8Jg-Kz-f1h"/>
+                            <constraint firstItem="Byc-Zx-mgo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ivi-5d-heQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fil-HW-f7J" secondAttribute="trailing" constant="16" id="M81-65-8vv"/>
+                            <constraint firstItem="Fil-HW-f7J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="N08-hY-TRz"/>
+                            <constraint firstItem="Byc-Zx-mgo" firstAttribute="top" secondItem="Fil-HW-f7J" secondAttribute="bottom" constant="28" id="QcZ-s4-PeA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T9m-Rg-dZX" secondAttribute="trailing" constant="16" id="e3T-pJ-XKR"/>
+                            <constraint firstItem="T9m-Rg-dZX" firstAttribute="top" secondItem="Byc-Zx-mgo" secondAttribute="bottom" constant="30" id="jdC-fE-2eM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Byc-Zx-mgo" secondAttribute="trailing" constant="16" id="vfp-wR-5hy"/>
+                            <constraint firstItem="T9m-Rg-dZX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="z5C-Bq-dsE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="channelTF" destination="Fil-HW-f7J" id="6HQ-mc-C9Y"/>
+                        <outlet property="keyTF" destination="Byc-Zx-mgo" id="les-lt-wfQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215" y="134"/>
+        </scene>
+        <!--Map Controller-->
+        <scene sceneID="paY-gT-SOV">
+            <objects>
+                <viewController id="3qG-Qx-V5X" customClass="MapController" customModule="G_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dSy-s1-rLA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jme-i5-UOI" customClass="MGLMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/streets-v11"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jme-i5-UOI" firstAttribute="leading" secondItem="dSy-s1-rLA" secondAttribute="leading" id="9K4-R5-A1h"/>
+                            <constraint firstAttribute="trailing" secondItem="jme-i5-UOI" secondAttribute="trailing" id="ByY-23-uBI"/>
+                            <constraint firstItem="jme-i5-UOI" firstAttribute="bottom" secondItem="oTA-6e-8lW" secondAttribute="bottom" id="GuI-Kv-YUz"/>
+                            <constraint firstItem="jme-i5-UOI" firstAttribute="top" secondItem="dSy-s1-rLA" secondAttribute="top" id="v03-MA-u9Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oTA-6e-8lW"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="jme-i5-UOI" id="Eaa-0r-y07"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKj-0d-p0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="134"/>
+        </scene>
+        <!--My Cars-->
+        <scene sceneID="BmZ-jq-gIL">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteController" id="Iau-ca-oN8" customClass="CarsController" customModule="G_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hd4-xt-0wO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SjC-Jk-yG6">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8y-Z0-RI4">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="VgL-MG-alr">
+                                        <rect key="frame" x="8" y="107" width="359" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Val-jA-aKv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your car list is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14e-DL-UGW">
+                                        <rect key="frame" x="8" y="175" width="359" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="k2x-WE-ABg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Myndraine" family="Myndraine" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD3-dW-8aX">
+                                        <rect key="frame" x="30" y="210" width="315" height="59"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="59" id="g8n-jy-luh"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Tap on the 'Add Car' button below to add a car.">
+                                                <attributes>
+                                                    <color key="NSColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="17" name="Myndraine"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyK-85-qxA">
+                                        <rect key="frame" x="97.5" y="277" width="180" height="50"/>
+                                        <color key="backgroundColor" red="0.99215686270000003" green="0.74901960779999999" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="log in" label="log in"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RYh-bD-yBD"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="yE9-Jp-qjy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="tintColor" red="0.99987119440000005" green="0.99998223779999995" blue="0.99984109399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Add Car">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addCar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4Q-Ox-ucm"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="chv-M1-w9y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="yyK-85-qxA" firstAttribute="top" secondItem="uD3-dW-8aX" secondAttribute="bottom" constant="8" id="4nq-YJ-M2B"/>
+                                    <constraint firstAttribute="trailing" secondItem="VgL-MG-alr" secondAttribute="trailing" constant="8" id="7nB-sc-HSd"/>
+                                    <constraint firstItem="uD3-dW-8aX" firstAttribute="top" secondItem="14e-DL-UGW" secondAttribute="bottom" constant="-5" id="AJN-xQ-9s1"/>
+                                    <constraint firstItem="VgL-MG-alr" firstAttribute="top" secondItem="F8y-Z0-RI4" secondAttribute="top" constant="107" id="HGf-nx-QaD"/>
+                                    <constraint firstItem="yyK-85-qxA" firstAttribute="centerX" secondItem="F8y-Z0-RI4" secondAttribute="centerX" id="Huw-Gh-v38"/>
+                                    <constraint firstAttribute="trailing" secondItem="uD3-dW-8aX" secondAttribute="trailing" constant="30" id="JzX-mi-hcZ"/>
+                                    <constraint firstItem="14e-DL-UGW" firstAttribute="leading" secondItem="F8y-Z0-RI4" secondAttribute="leading" constant="8" id="cat-bK-pRK"/>
+                                    <constraint firstItem="uD3-dW-8aX" firstAttribute="leading" secondItem="F8y-Z0-RI4" secondAttribute="leading" constant="30" id="i7q-4c-jzJ"/>
+                                    <constraint firstItem="14e-DL-UGW" firstAttribute="top" secondItem="VgL-MG-alr" secondAttribute="bottom" constant="8" id="jE3-mF-adP"/>
+                                    <constraint firstItem="VgL-MG-alr" firstAttribute="leading" secondItem="F8y-Z0-RI4" secondAttribute="leading" constant="8" id="rEy-gn-tj0"/>
+                                    <constraint firstAttribute="trailing" secondItem="14e-DL-UGW" secondAttribute="trailing" constant="8" id="xjf-MC-nB1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wo3-BR-BUf" firstAttribute="trailing" secondItem="F8y-Z0-RI4" secondAttribute="trailing" id="1dn-am-3yy"/>
+                            <constraint firstItem="wo3-BR-BUf" firstAttribute="bottom" secondItem="F8y-Z0-RI4" secondAttribute="bottom" id="5YT-be-4eN"/>
+                            <constraint firstItem="F8y-Z0-RI4" firstAttribute="top" secondItem="wo3-BR-BUf" secondAttribute="top" id="BOW-S1-yeo"/>
+                            <constraint firstItem="SjC-Jk-yG6" firstAttribute="leading" secondItem="F8y-Z0-RI4" secondAttribute="leading" id="Urm-MB-b2v"/>
+                            <constraint firstItem="SjC-Jk-yG6" firstAttribute="bottom" secondItem="F8y-Z0-RI4" secondAttribute="bottom" id="V0o-tJ-RL5"/>
+                            <constraint firstItem="F8y-Z0-RI4" firstAttribute="leading" secondItem="wo3-BR-BUf" secondAttribute="leading" id="YGc-tr-1rf"/>
+                            <constraint firstItem="SjC-Jk-yG6" firstAttribute="trailing" secondItem="F8y-Z0-RI4" secondAttribute="trailing" id="cAv-I9-Ffa"/>
+                            <constraint firstItem="SjC-Jk-yG6" firstAttribute="top" secondItem="wo3-BR-BUf" secondAttribute="top" id="ojz-8p-94X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wo3-BR-BUf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Cars" id="fwu-fD-iIm">
+                        <barButtonItem key="rightBarButtonItem" title="Add New Car" id="AyG-S0-QBh">
+                            <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="Ek8-xF-JfD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emptyView" destination="F8y-Z0-RI4" id="MGm-yZ-SKN"/>
+                        <outlet property="tableView" destination="SjC-Jk-yG6" id="h9M-aI-cIb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nzt-Mo-BP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-930.39999999999998" y="133.5832083958021"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="WQ1-17-oOH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ey4-1b-Ylm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorites" id="gKN-vF-xai"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="E2C-ek-OKV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Iau-ca-oN8" kind="relationship" relationship="rootViewController" id="Om3-th-Mkn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8Q-DT-Wr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1780" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car" width="96" height="96"/>
+        <image name="favorites" width="16" height="16"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="chv-M1-w9y"/>
+    </inferredMetricsTieBreakers>
+</document>
