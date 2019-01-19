@@ -9,7 +9,7 @@
 import UIKit
 import Mapbox
 
-class ChannelCell: UITableViewCell {
+class ChannelCell: UITableViewCell, MGLMapViewDelegate{
 
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var mapView: MGLMapView!
@@ -17,7 +17,7 @@ class ChannelCell: UITableViewCell {
 	
 	override func awakeFromNib() {
         super.awakeFromNib()
-		
+		mapView.delegate = self
 		mapView.layer.cornerRadius = 15
 		mapView.layer.shadowOpacity = 0.7
     }
@@ -27,4 +27,13 @@ class ChannelCell: UITableViewCell {
     }
 	
 	
+	// Use the default marker. See also: our view annotation or custom marker examples.
+	func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+		return nil
+	}
+	
+	// Allow callout view to appear when an annotation is tapped.
+	func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+		return true
+	}
 }

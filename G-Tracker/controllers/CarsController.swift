@@ -129,6 +129,7 @@ class CarsController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		print("clicked item")
 		if(searched){
 			let channel = self.searchChannels[indexPath.row]
 			let storyboard = UIStoryboard(name: "Main", bundle: nil)

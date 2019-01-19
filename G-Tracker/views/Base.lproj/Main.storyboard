@@ -133,7 +133,7 @@
         <!--Map Controller-->
         <scene sceneID="paY-gT-SOV">
             <objects>
-                <viewController id="3qG-Qx-V5X" customClass="MapController" customModule="G_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapController" id="3qG-Qx-V5X" customClass="MapController" customModule="G_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dSy-s1-rLA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,6 +155,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oTA-6e-8lW"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Choose Date" id="FIx-YW-gEE"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="jme-i5-UOI" id="Eaa-0r-y07"/>
                     </connections>
