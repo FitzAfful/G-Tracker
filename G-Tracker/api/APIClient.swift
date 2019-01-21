@@ -68,9 +68,7 @@ enum APIRouter: URLRequestConvertible {
 		]
 		
 		let url = urlComponents.url!
-		print(url)
 		var urlRequest = URLRequest(url: url)
-		// HTTP Method
 		urlRequest.httpMethod = method.rawValue
 		
 		// Common Headers
