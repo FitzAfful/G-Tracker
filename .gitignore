@@ -1,1 +1,2 @@
-Pods/Mapbox-iOS-SDK/*
+Pods/Mapbox-iOS-SDK/**
+Pods/Mapbox-iOS-SDK/*/*
