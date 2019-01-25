@@ -1,2 +1,12 @@
-Pods/Mapbox-iOS-SDK/**
-Pods/Mapbox-iOS-SDK/*/*
+Pods/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM/Contents/Resources/DWARF/Mapbox
+Pods/Mapbox-iOS-SDK/dynamic/Mapbox.framework/Mapbox
+Pods/Mapbox-iOS-SDK/dynamic/Mapbox.framework/Assets.car
+Pods/Realm/core/librealmcore-ios.a
+Pods/Mapbox-iOS-SDK/dynamic/Mapbox.framework/Mapbox/.*
+Pods/Mapbox-iOS-SDK/dynamic/.*
+Pods/Mapbox-iOS-SDK/dynamic/**
+Pods/Mapbox-iOS-SDK/dynamic/*
+Pods/Mapbox-iOS-SDK/dynamic/*/**
+Pods/Mapbox-iOS-SDK/dynamic/*/*
+Pods/Mapbox-iOS-SDK/dynamic/**/**
+Pods/Mapbox-iOS-SDK/dynamic/**/*
