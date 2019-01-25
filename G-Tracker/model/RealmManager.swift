@@ -37,11 +37,11 @@ class RealmManager {
 	}
 	
 	func getById(id: String) -> Channel {
-		return (realm.object(ofType: RealmChannel.self, forPrimaryKey: String.self)?.channel)!
+		return (realm.object(ofType: RealmChannel.self, forPrimaryKey: Int.self)?.channel)!
 	}
 	
-	func getRealmChannelById(id: String) -> RealmChannel {
-		return realm.object(ofType: RealmChannel.self, forPrimaryKey: String.self)!
+	func getRealmChannelById(id: Int) -> RealmChannel {
+		return realm.object(ofType: RealmChannel.self, forPrimaryKey: id)!
 	}
 	
 	func save(channel: Channel) {
@@ -56,8 +56,10 @@ class RealmManager {
 		}
 	}
 	
-	func deleteById(id: String) {
+	func deleteById(id: Int) {
+		print("ghghgh000")
 		let object = getRealmChannelById(id: id)
+		print("ghghgh")
 		try! realm.write {
 			realm.delete(object )
 		}

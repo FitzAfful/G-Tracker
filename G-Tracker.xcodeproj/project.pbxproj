@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84235B1A21F62F5800B88DB7 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84235B1921F62F5800B88DB7 /* DatePickerViewController.swift */; };
+		84235B1C21F62F8D00B88DB7 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84235B1B21F62F8D00B88DB7 /* Date+Extension.swift */; };
+		84235B1E21F6303300B88DB7 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84235B1D21F6303300B88DB7 /* UIAlertController.swift */; };
 		847062D021F143BE00D55C98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847062CF21F143BE00D55C98 /* AppDelegate.swift */; };
 		847062D221F143BE00D55C98 /* AddCarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847062D121F143BE00D55C98 /* AddCarController.swift */; };
 		847062D521F143BE00D55C98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847062D321F143BE00D55C98 /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 /* Begin PBXFileReference section */
 		004A76BCC755EBFFC6DA3541 /* Pods-G-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Tracker.release.xcconfig"; path = "Target Support Files/Pods-G-Tracker/Pods-G-Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		3CB775F2EF809A4512356EC4 /* Pods-G-Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Tracker.debug.xcconfig"; path = "Target Support Files/Pods-G-Tracker/Pods-G-Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		84235B1921F62F5800B88DB7 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerViewController.swift; path = "G-Tracker/DatePickerViewController.swift"; sourceTree = SOURCE_ROOT; };
+		84235B1B21F62F8D00B88DB7 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		84235B1D21F6303300B88DB7 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		847062CC21F143BE00D55C98 /* G-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "G-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		847062CF21F143BE00D55C98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847062D121F143BE00D55C98 /* AddCarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarController.swift; sourceTree = "<group>"; };
@@ -143,9 +149,12 @@
 		84BE4AB321F2268300259D78 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				84235B1B21F62F8D00B88DB7 /* Date+Extension.swift */,
+				84235B1921F62F5800B88DB7 /* DatePickerViewController.swift */,
 				84BE4AB521F226AE00259D78 /* ChannelCell.swift */,
 				84BE4AB421F226AE00259D78 /* ChannelCell.xib */,
 				847062D321F143BE00D55C98 /* Main.storyboard */,
+				84235B1D21F6303300B88DB7 /* UIAlertController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -321,12 +330,15 @@
 			files = (
 				847062D221F143BE00D55C98 /* AddCarController.swift in Sources */,
 				84BE4AAD21F1F8FD00259D78 /* RealmManager.swift in Sources */,
+				84235B1C21F62F8D00B88DB7 /* Date+Extension.swift in Sources */,
 				84CF594921F1872700ED9EE4 /* APIClient.swift in Sources */,
 				84CF594521F1801E00ED9EE4 /* Channel.swift in Sources */,
 				84CF594321F17FDA00ED9EE4 /* Feed.swift in Sources */,
 				84CF594021F17BA500ED9EE4 /* ACFloatingTextfield.swift in Sources */,
 				84CF594721F181D200ED9EE4 /* ThingSpeakResponse.swift in Sources */,
 				84BE4AB721F226AE00259D78 /* ChannelCell.swift in Sources */,
+				84235B1A21F62F5800B88DB7 /* DatePickerViewController.swift in Sources */,
+				84235B1E21F6303300B88DB7 /* UIAlertController.swift in Sources */,
 				84BE4AAF21F1FF1D00259D78 /* MapController.swift in Sources */,
 				84BE4AB121F224BA00259D78 /* CarsController.swift in Sources */,
 				847062D021F143BE00D55C98 /* AppDelegate.swift in Sources */,

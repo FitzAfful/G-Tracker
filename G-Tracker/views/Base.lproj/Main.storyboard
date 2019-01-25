@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Car Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fil-HW-f7J" customClass="ACFloatingTextfield" customModule="G_Tracker" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Vehicle ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fil-HW-f7J" customClass="ACFloatingTextfield" customModule="G_Tracker" customModuleProvider="target">
                                 <rect key="frame" x="16" y="84" width="343" height="45"/>
                                 <accessibility key="accessibilityConfiguration" hint="Email or Username" identifier="Email or Username" label="Email or Username"/>
                                 <constraints>
@@ -139,12 +139,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jme-i5-UOI" customClass="MGLMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/streets-v11"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUo-UJ-xtD">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Choose Date" id="FIx-YW-gEE">
+                                        <connections>
+                                            <action selector="chooseDate" destination="3qG-Qx-V5X" id="60i-BI-GcE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -155,9 +166,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oTA-6e-8lW"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Choose Date" id="FIx-YW-gEE"/>
-                    </toolbarItems>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="a8g-oS-huu">
+                        <barButtonItem key="rightBarButtonItem" title="Options" id="oWu-l1-f0t">
+                            <connections>
+                                <action selector="options" destination="3qG-Qx-V5X" id="Qy0-4p-j4e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="jme-i5-UOI" id="Eaa-0r-y07"/>
