@@ -1,1 +1,1 @@
-Pods/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM     
+Pods/Mapbox-iOS-SDK/     
