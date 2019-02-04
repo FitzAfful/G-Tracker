@@ -14,6 +14,8 @@ class MapController: UIViewController, MGLMapViewDelegate {
 	@IBOutlet weak var mapView: MGLMapView!
 	var channel: Channel!
 	let date: Date! = Date()
+	var routeLine: MGLPolyline!
+	var pointAnnotations = [MGLPointAnnotation]()
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +23,20 @@ class MapController: UIViewController, MGLMapViewDelegate {
 		mapView.zoomLevel = 10
 		mapView.delegate = self
 		self.title = channel.name
+		self.plotOnMap(feeds: self.channel.feeds)
 		
+	}
+	
+	
+	func plotOnMap(feeds: [Feed]){
+		if(routeLine != nil){
+			mapView.removeAnnotation(routeLine)
+		}
+		if(!(pointAnnotations.isEmpty)){
+			mapView.removeAnnotations(pointAnnotations)
+		}
 		var coordinates:[CLLocationCoordinate2D] = []
-		
-		// Fill an array with point annotations and add it to the map.
-		var pointAnnotations = [MGLPointAnnotation]()
-		for feed in self.channel.feeds {
+		for feed in feeds {
 			coordinates.append(CLLocationCoordinate2D(latitude: Double(feed.latitude)!, longitude: Double(feed.longitude)!))
 		}
 		
@@ -41,7 +51,13 @@ class MapController: UIViewController, MGLMapViewDelegate {
 			mapView.centerCoordinate = CLLocationCoordinate2D(latitude: coordinates.last!.latitude, longitude: coordinates.last!.longitude)
 		}
 		mapView.addAnnotations(pointAnnotations)
+		
+		
+		routeLine = MGLPolyline(coordinates: &coordinates, count: UInt(coordinates.count))
+		mapView.addAnnotation(routeLine)
+		mapView.setVisibleCoordinates(&coordinates, count: UInt(coordinates.count), edgePadding: .zero, animated: true)
 	}
+	
 	
 	@IBAction func options() {
 		let alert = UIAlertController(title: "Options", message: "", preferredStyle: UIAlertController.Style.actionSheet)
@@ -69,46 +85,65 @@ class MapController: UIViewController, MGLMapViewDelegate {
 	}
 	
 	@IBAction func chooseFrom(_ sender: Any) {
+		print("choose From")
+		var myDate: Date! = Date()
 		let alert = UIAlertController(style: .actionSheet, title: "Choose Start Date", message: "Choose Start Date to see route for car")
-		alert.addDatePicker(mode: .date, date: Date(), minimumDate: nil, maximumDate: nil ) { date in
-			let alert1 = UIAlertController(style: .actionSheet, title: "Choose End Date", message: "Choose End Date to see route for car")
-			alert1.addDatePicker(mode: .date, date: Date(), minimumDate: nil, maximumDate: nil ) { date in
-				//Check the range here
-			}
-			alert1.addAction(title: "Done", style: .cancel)
-			alert1.show()
+		alert.addDatePicker(mode: .date, date: Date(), minimumDate: nil, maximumDate: Date() ) { date2 in
+			print("choose From 1")
+			myDate = date2
 		}
-		alert.addAction(title: "Done", style: .cancel)
-		alert.show()
+		alert.addAction(UIAlertAction(title: "Next", style: UIAlertAction.Style.default, handler: { (action) in
+			self.chooseTo(oldDate: myDate)
+		}))
+		alert.addAction(title: "Cancel", style: .cancel)
+		self.navigationController?.present(alert, animated: true, completion: nil)
+	}
+	
+	func chooseTo(oldDate: Date){
+		var newDate: Date = Date()
+		let alert1 = UIAlertController(style: .actionSheet, title: "Choose End Date", message: "Choose End Date to see route for car")
+		alert1.addDatePicker(mode: .date, date: Date(), minimumDate: nil, maximumDate: Date() ) { date1 in
+			print("choose From 2")
+			newDate = date1
+		}
+		alert1.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (action) in
+			var myFeeds: [Feed] = []
+			for item in self.channel.feeds {
+				let dateFormatter = DateFormatter()
+				dateFormatter.locale = Locale.current
+				dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+				
+				if let feedDate = dateFormatter.date(from: item.created_at) {
+					if((feedDate > oldDate) && (feedDate < newDate)){
+						myFeeds.append(item)
+					}
+				}
+			}
+			self.plotOnMap(feeds: myFeeds)
+		}))
+		alert1.addAction(title: "Cancel", style: .cancel)
+		self.navigationController?.present(alert1, animated: true, completion: nil)
 	}
 	
 	@IBAction func chooseByPoints(_ sender: Any){
-		let alert = UIAlertController(style: .actionSheet, title: "TextField", message: "Secure Entry")
-		
-		let textField: TextField.Config = { textField in
-			textField.leftViewPadding = 12
-			textField.becomeFirstResponder()
-			textField.borderWidth = 1
-			textField.cornerRadius = 8
-			textField.borderColor = UIColor.lightGray.withAlphaComponent(0.5)
-			textField.backgroundColor = nil
-			textField.textColor = .black
-			textField.placeholder = "Type Number of Points"
-			textField.keyboardAppearance = .default
-			textField.keyboardType = .numberPad
-			//textField.isSecureTextEntry = true
-			textField.returnKeyType = .done
-			textField.action { textField in
-				//Log("textField = \(String(describing: textField.text))")
-			}
+		let alert = UIAlertController(style: .actionSheet, title: "Picker View", message: "Preferred Content Height")
+			
+		let frameSizes: [CGFloat] = (1...self.channel.feeds.count).map { CGFloat($0) }
+		let pickerViewValues: [[String]] = [frameSizes.map { Int($0).description }]
+		let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: 0)
+			
+		var number = ""
+		alert.addPickerView(values: pickerViewValues, initialSelection: pickerViewSelectedValue) { vc, picker, index, values in
+			let item = values[0]
+			print(item[index.row])
+			number = item[index.row]
 		}
-		
-		alert.addOneTextField(configuration: textField)
-		alert.addAction(title: "OK", style: .cancel)
-		delay(1) {
-			alert.show()
-		}
-		print("Kofi attah")
+		alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (action) in
+			print("Number: \(number)")
+			let myFeeds = self.channel.feeds.prefix(Int(number) ?? 0)
+			self.plotOnMap(feeds: Array(myFeeds))
+		}))
+		self.navigationController?.present(alert, animated: true, completion: nil)
 	}
 
 	// Use the default marker. See also: our view annotation or custom marker examples.
@@ -126,6 +161,7 @@ class MapController: UIViewController, MGLMapViewDelegate {
 		
 		// If there’s no reusable annotation view available, initialize a new one.
 		if annotationView == nil {
+			//annotationView = MGLAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
 			annotationView = CustomAnnotationView(reuseIdentifier: reuseIdentifier)
 			annotationView!.bounds = CGRect(x: 0, y: 0, width: 40, height: 40)
 			

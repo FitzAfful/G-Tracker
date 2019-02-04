@@ -204,7 +204,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8y-Z0-RI4">
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="VgL-MG-alr">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8_v6" translatesAutoresizingMaskIntoConstraints="NO" id="VgL-MG-alr">
                                         <rect key="frame" x="8" y="107" width="359" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Val-jA-aKv"/>
@@ -711,10 +711,10 @@
             </objects>
             <point key="canvasLocation" x="465" y="-613"/>
         </scene>
-        <!--Add a Car-->
+        <!--Update Car Details-->
         <scene sceneID="iLy-qT-Beu">
             <objects>
-                <viewController storyboardIdentifier="EditCarController" title="Add a Car" id="PgX-tc-dY3" customClass="EditCarController" customModule="G_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditCarController" title="Update Car Details" id="PgX-tc-dY3" customClass="EditCarController" customModule="G_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AnI-ww-W3r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -828,7 +828,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car" width="96" height="96"/>
         <image name="icons8_v6" width="262.5" height="262.5"/>
     </resources>
     <inferredMetricsTieBreakers>
