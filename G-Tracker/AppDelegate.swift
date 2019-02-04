@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		if(UserDefaults().string(forKey: "pin") != nil){
+			print("There is a pin. to Login")
+			let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
+			let slideController = myStoryboard.instantiateViewController(withIdentifier: "LoginController")
+			window?.rootViewController = slideController
+		}
 		return true
 	}
 

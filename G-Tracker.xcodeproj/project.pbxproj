@@ -25,6 +25,12 @@
 		84CF594521F1801E00ED9EE4 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF594421F1801E00ED9EE4 /* Channel.swift */; };
 		84CF594721F181D200ED9EE4 /* ThingSpeakResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF594621F181D200ED9EE4 /* ThingSpeakResponse.swift */; };
 		84CF594921F1872700ED9EE4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF594821F1872700ED9EE4 /* APIClient.swift */; };
+		84D1A5C421FFF83E00DCAD1B /* WalkthroughController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1A5C321FFF83E00DCAD1B /* WalkthroughController.swift */; };
+		84E0D9742207C71F002E699B /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0D9732207C71F002E699B /* SetupController.swift */; };
+		84E0D9762207C730002E699B /* CompleteSetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0D9752207C730002E699B /* CompleteSetupController.swift */; };
+		84E0D9782207CB08002E699B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0D9772207CB08002E699B /* LoginController.swift */; };
+		84E0D97A2207D66F002E699B /* EditCarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0D9792207D66F002E699B /* EditCarController.swift */; };
+		84E0D97C2207DD80002E699B /* AlertExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0D97B2207DD80002E699B /* AlertExtensions.swift */; };
 		F0CAB96C8A342221DA71AED7 /* Pods_G_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53CBE9B1A4FF85BEB569E03 /* Pods_G_Tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,12 @@
 		84CF594421F1801E00ED9EE4 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		84CF594621F181D200ED9EE4 /* ThingSpeakResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingSpeakResponse.swift; sourceTree = "<group>"; };
 		84CF594821F1872700ED9EE4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		84D1A5C321FFF83E00DCAD1B /* WalkthroughController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughController.swift; sourceTree = "<group>"; };
+		84E0D9732207C71F002E699B /* SetupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
+		84E0D9752207C730002E699B /* CompleteSetupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSetupController.swift; sourceTree = "<group>"; };
+		84E0D9772207CB08002E699B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		84E0D9792207D66F002E699B /* EditCarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCarController.swift; sourceTree = "<group>"; };
+		84E0D97B2207DD80002E699B /* AlertExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtensions.swift; sourceTree = "<group>"; };
 		A53CBE9B1A4FF85BEB569E03 /* Pods_G_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_G_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,8 +152,13 @@
 			isa = PBXGroup;
 			children = (
 				847062D121F143BE00D55C98 /* AddCarController.swift */,
+				84E0D9792207D66F002E699B /* EditCarController.swift */,
 				84BE4AAE21F1FF1D00259D78 /* MapController.swift */,
 				84BE4AB021F224BA00259D78 /* CarsController.swift */,
+				84D1A5C321FFF83E00DCAD1B /* WalkthroughController.swift */,
+				84E0D9732207C71F002E699B /* SetupController.swift */,
+				84E0D9752207C730002E699B /* CompleteSetupController.swift */,
+				84E0D9772207CB08002E699B /* LoginController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -149,12 +166,13 @@
 		84BE4AB321F2268300259D78 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				84235B1B21F62F8D00B88DB7 /* Date+Extension.swift */,
 				84235B1921F62F5800B88DB7 /* DatePickerViewController.swift */,
+				84235B1B21F62F8D00B88DB7 /* Date+Extension.swift */,
 				84BE4AB521F226AE00259D78 /* ChannelCell.swift */,
 				84BE4AB421F226AE00259D78 /* ChannelCell.xib */,
 				847062D321F143BE00D55C98 /* Main.storyboard */,
 				84235B1D21F6303300B88DB7 /* UIAlertController.swift */,
+				84E0D97B2207DD80002E699B /* AlertExtensions.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -253,11 +271,12 @@
 				"${BUILT_PRODUCTS_DIR}/FTIndicator/FTIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
-				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/NSDate+TimeAgo/NSDate_TimeAgo.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVPinView/SVPinView.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -270,11 +289,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSDate_TimeAgo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVPinView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +353,7 @@
 				84235B1C21F62F8D00B88DB7 /* Date+Extension.swift in Sources */,
 				84CF594921F1872700ED9EE4 /* APIClient.swift in Sources */,
 				84CF594521F1801E00ED9EE4 /* Channel.swift in Sources */,
+				84E0D9742207C71F002E699B /* SetupController.swift in Sources */,
 				84CF594321F17FDA00ED9EE4 /* Feed.swift in Sources */,
 				84CF594021F17BA500ED9EE4 /* ACFloatingTextfield.swift in Sources */,
 				84CF594721F181D200ED9EE4 /* ThingSpeakResponse.swift in Sources */,
@@ -340,6 +361,11 @@
 				84235B1A21F62F5800B88DB7 /* DatePickerViewController.swift in Sources */,
 				84235B1E21F6303300B88DB7 /* UIAlertController.swift in Sources */,
 				84BE4AAF21F1FF1D00259D78 /* MapController.swift in Sources */,
+				84E0D9782207CB08002E699B /* LoginController.swift in Sources */,
+				84E0D97A2207D66F002E699B /* EditCarController.swift in Sources */,
+				84D1A5C421FFF83E00DCAD1B /* WalkthroughController.swift in Sources */,
+				84E0D97C2207DD80002E699B /* AlertExtensions.swift in Sources */,
+				84E0D9762207C730002E699B /* CompleteSetupController.swift in Sources */,
 				84BE4AB121F224BA00259D78 /* CarsController.swift in Sources */,
 				847062D021F143BE00D55C98 /* AppDelegate.swift in Sources */,
 			);

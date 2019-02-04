@@ -20,7 +20,7 @@ class MapController: UIViewController, MGLMapViewDelegate {
 		mapView.tintColor = .lightGray
 		mapView.zoomLevel = 10
 		mapView.delegate = self
-		self.title = channel.description
+		self.title = channel.name
 		
 		var coordinates:[CLLocationCoordinate2D] = []
 		
@@ -44,24 +44,71 @@ class MapController: UIViewController, MGLMapViewDelegate {
 	}
 	
 	@IBAction func options() {
-		let alert = UIAlertController(title: "Delete Vehicle", message: "Are you sure you want to delete vehicle?", preferredStyle: UIAlertController.Style.actionSheet)
-		alert.addAction(UIAlertAction(title: "Yes, Delete", style: UIAlertAction.Style.destructive, handler: { (action) in
-			RealmManager().deleteById(id: self.channel!.id)
-			self.navigationController?.popToRootViewController(animated: true)
+		let alert = UIAlertController(title: "Options", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+		alert.addAction(UIAlertAction(title: "Edit Vehicle Details", style: UIAlertAction.Style.default, handler: { (action) in
+			let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
+			let slideController = myStoryboard.instantiateViewController(withIdentifier: "EditCarController") as! EditCarController
+			slideController.channel = self.channel
+			self.navigationController!.pushViewController(slideController, animated: true)
 		}))
-		alert.addAction(UIAlertAction(title: "No. Cancel", style: UIAlertAction.Style.cancel, handler: { (action) in
+		alert.addAction(UIAlertAction(title: "Delete Vehicle", style: UIAlertAction.Style.destructive, handler: { (action) in
+			let alert1 = UIAlertController(title: "Delete Vehicle", message: "Are you sure you want to delete vehicle?", preferredStyle: UIAlertController.Style.actionSheet)
+			alert1.addAction(UIAlertAction(title: "Yes, Delete", style: UIAlertAction.Style.destructive, handler: { (action) in
+				RealmManager().deleteById(id: self.channel!.id)
+				self.navigationController?.popToRootViewController(animated: true)
+			}))
+			alert1.addAction(UIAlertAction(title: "No. Cancel", style: UIAlertAction.Style.cancel, handler: { (action) in
+				alert1.dismiss(animated: true, completion: nil)
+			}))
+			self.present(alert1, animated: true, completion: nil)
+		}))
+		alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (action) in
 			alert.dismiss(animated: true, completion: nil)
 		}))
 		self.present(alert, animated: true, completion: nil)
 	}
 	
-	@IBAction func chooseDate() {
-		let alert = UIAlertController(style: .actionSheet, title: "", message: "Choose Date to see route for car")
+	@IBAction func chooseFrom(_ sender: Any) {
+		let alert = UIAlertController(style: .actionSheet, title: "Choose Start Date", message: "Choose Start Date to see route for car")
 		alert.addDatePicker(mode: .date, date: Date(), minimumDate: nil, maximumDate: nil ) { date in
-			print(date)
+			let alert1 = UIAlertController(style: .actionSheet, title: "Choose End Date", message: "Choose End Date to see route for car")
+			alert1.addDatePicker(mode: .date, date: Date(), minimumDate: nil, maximumDate: nil ) { date in
+				//Check the range here
+			}
+			alert1.addAction(title: "Done", style: .cancel)
+			alert1.show()
 		}
 		alert.addAction(title: "Done", style: .cancel)
 		alert.show()
+	}
+	
+	@IBAction func chooseByPoints(_ sender: Any){
+		let alert = UIAlertController(style: .actionSheet, title: "TextField", message: "Secure Entry")
+		
+		let textField: TextField.Config = { textField in
+			textField.leftViewPadding = 12
+			textField.becomeFirstResponder()
+			textField.borderWidth = 1
+			textField.cornerRadius = 8
+			textField.borderColor = UIColor.lightGray.withAlphaComponent(0.5)
+			textField.backgroundColor = nil
+			textField.textColor = .black
+			textField.placeholder = "Type Number of Points"
+			textField.keyboardAppearance = .default
+			textField.keyboardType = .numberPad
+			//textField.isSecureTextEntry = true
+			textField.returnKeyType = .done
+			textField.action { textField in
+				//Log("textField = \(String(describing: textField.text))")
+			}
+		}
+		
+		alert.addOneTextField(configuration: textField)
+		alert.addAction(title: "OK", style: .cancel)
+		delay(1) {
+			alert.show()
+		}
+		print("Kofi attah")
 	}
 
 	// Use the default marker. See also: our view annotation or custom marker examples.
@@ -118,4 +165,10 @@ class CustomAnnotationView: MGLAnnotationView {
 		layer.borderWidth = selected ? bounds.width / 4 : 2
 		layer.add(animation, forKey: "borderWidth")
 	}
+}
+
+
+func delay(_ delay:Double, closure:@escaping ()->()) {
+	DispatchQueue.main.asyncAfter(
+		deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
 }

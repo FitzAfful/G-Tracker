@@ -33,7 +33,17 @@ class RealmManager {
 	}
 	
 	func getAll() -> [Channel] {
-		return realm.objects(RealmChannel.self).map { $0.channel }
+		//return realm.objects(RealmChannel.self).map { $0.channel }
+		var array:[Channel] = []
+		self.fetchChannels { (result) in
+			switch (result){
+			case .success(let response):
+				array = response
+			case .failure(_):
+				break
+			}
+		}
+		return array
 	}
 	
 	func getById(id: String) -> Channel {

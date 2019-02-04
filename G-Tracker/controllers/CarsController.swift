@@ -16,7 +16,6 @@ class CarsController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	var channels:[Channel] = []
 	var searchChannels:[Channel] = []
 	var searched: Bool = false
-	let gateway = RealmManager()
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var emptyView: UIView!
 	let searchController = UISearchController(searchResultsController: nil)
@@ -49,6 +48,8 @@ class CarsController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	
 	func getData(){
 		self.channels.removeAll()
+		print("Shit")
+		let gateway = RealmManager()
 		self.channels = gateway.getAll()
 		print(self.channels)
 		setupChannels()
@@ -115,7 +116,7 @@ class CarsController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		}
 		
 		let channel = channels[indexPath.row]
-		cell.titleLabel.text = channel.description
+		cell.titleLabel.text = channel.name
 		if let lastFeed = self.channels[indexPath.row].feeds.last {
 			cell.mapView.setCenter(CLLocationCoordinate2D(latitude: Double(lastFeed.latitude)!, longitude: Double(lastFeed.longitude)!), zoomLevel: 12, animated: false)
 			let hello = MGLPointAnnotation()

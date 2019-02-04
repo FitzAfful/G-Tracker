@@ -18,6 +18,7 @@ struct Feed: Decodable  {
 	var altitude: String //field4
 	var main_id: String //field5
 	var sub_id: String //field6
+	var created_at: String
 	
 	private enum CodingKeys: String, CodingKey {
 		case entry_id
@@ -27,6 +28,7 @@ struct Feed: Decodable  {
 		case altitude = "field4"
 		case main_id = "field5"
 		case sub_id = "field6"
+		case created_at
 	}
 }
 
@@ -46,6 +48,7 @@ public class RealmFeed: Object {
 	@objc dynamic var altitude: String = ""
 	@objc dynamic var main_id: String = ""
 	@objc dynamic var sub_id: String = ""
+	@objc dynamic var created_at: String = ""
 	
 	convenience init(feed: Feed) {
 		self.init()
@@ -56,6 +59,7 @@ public class RealmFeed: Object {
 		self.altitude = feed.altitude
 		self.main_id = feed.main_id
 		self.sub_id = feed.sub_id
+		self.created_at = feed.created_at
 		
 	}
 	
@@ -64,6 +68,6 @@ public class RealmFeed: Object {
 	}
 	
 	var feed: Feed{
-		return Feed(entry_id: self.entry_id, latitude: self.latitude, longitude: self.longitude, velocity: self.velocity, altitude: self.altitude, main_id: self.main_id, sub_id: self.sub_id)
+		return Feed(entry_id: self.entry_id, latitude: self.latitude, longitude: self.longitude, velocity: self.velocity, altitude: self.altitude, main_id: self.main_id, sub_id: self.sub_id, created_at: self.created_at)
 	}
 }

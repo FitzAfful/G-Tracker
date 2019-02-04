@@ -13,7 +13,9 @@ target ‘G-Tracker’ do
     pod 'RealmSwift'
     pod 'SkeletonView'
     pod 'Mapbox-iOS-SDK'
+		pod 'OnboardingKit'
     pod 'Cosmos'
     pod 'Alamofire', '~> 5.0.0.beta.1'
+		pod 'SVPinView', '~> 1.0'
 end
 

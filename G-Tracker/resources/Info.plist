@@ -60,5 +60,7 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSFaceIDUsageDescription</key>
+	<string>To login into G-Tracker</string>
 </dict>
 </plist>

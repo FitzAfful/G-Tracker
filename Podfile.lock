@@ -13,12 +13,14 @@ PODS:
   - Mapbox-iOS-SDK (4.6.0)
   - "NSDate+TimeAgo (1.0.6)"
   - Nuke (7.5.1)
+  - OnboardingKit (0.0.5)
   - Realm (3.11.2):
     - Realm/Headers (= 3.11.2)
   - Realm/Headers (3.11.2)
   - RealmSwift (3.11.2):
     - Realm (= 3.11.2)
   - SkeletonView (1.4.1)
+  - SVPinView (1.0.5)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0.beta.1)
@@ -29,8 +31,10 @@ DEPENDENCIES:
   - Mapbox-iOS-SDK
   - "NSDate+TimeAgo"
   - Nuke
+  - OnboardingKit
   - RealmSwift
   - SkeletonView
+  - SVPinView (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -42,9 +46,11 @@ SPEC REPOS:
     - Mapbox-iOS-SDK
     - "NSDate+TimeAgo"
     - Nuke
+    - OnboardingKit
     - Realm
     - RealmSwift
     - SkeletonView
+    - SVPinView
 
 SPEC CHECKSUMS:
   Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
@@ -55,10 +61,12 @@ SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 204c04713477cf2a88c52c5a8eed1790eb75a02a
   "NSDate+TimeAgo": 35601c619b2d59290055e4fe76e61d97677a2360
   Nuke: 3814db501e55f17951451839c726ffd91641e9a5
+  OnboardingKit: 44b085c9e1e191a61fe1caea2bb581645fac1dc1
   Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
   RealmSwift: 12b8262fc08020b47de4fd88eb3d5c9425b34ec7
   SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
+  SVPinView: 565c7b0e44e1867d556412bb86334472f73b69b2
 
-PODFILE CHECKSUM: 6e9489a6b800ad61817e716557992050a4c08aab
+PODFILE CHECKSUM: 0c813f88b00967e28d1911bc7ac5efe91de0be23
 
 COCOAPODS: 1.6.0.beta.2
