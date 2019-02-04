@@ -23,7 +23,13 @@ class MapController: UIViewController, MGLMapViewDelegate {
 		mapView.zoomLevel = 10
 		mapView.delegate = self
 		self.title = channel.name
-		self.plotOnMap(feeds: self.channel.feeds)
+		if(self.channel.feeds.count > 20){
+			let myFeeds = self.channel.feeds.prefix(20)
+			self.plotOnMap(feeds: Array(myFeeds))
+		}else{
+			let myFeeds = self.channel.feeds.prefix(self.channel.feeds.count)
+			self.plotOnMap(feeds: Array(myFeeds))
+		}
 		
 	}
 	
@@ -126,7 +132,7 @@ class MapController: UIViewController, MGLMapViewDelegate {
 	}
 	
 	@IBAction func chooseByPoints(_ sender: Any){
-		let alert = UIAlertController(style: .actionSheet, title: "Picker View", message: "Preferred Content Height")
+		let alert = UIAlertController(style: .actionSheet, title: "Choose number of Points", message: "Lets you see the route by choosing the last number of recorded points")
 			
 		let frameSizes: [CGFloat] = (1...self.channel.feeds.count).map { CGFloat($0) }
 		let pickerViewValues: [[String]] = [frameSizes.map { Int($0).description }]
@@ -147,7 +153,7 @@ class MapController: UIViewController, MGLMapViewDelegate {
 	}
 
 	// Use the default marker. See also: our view annotation or custom marker examples.
-	func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+	/*func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
 		// This example is only concerned with point annotations.
 		guard annotation is MGLPointAnnotation else {
 			return nil
@@ -171,6 +177,29 @@ class MapController: UIViewController, MGLMapViewDelegate {
 		}
 		
 		return annotationView
+	}*/
+	
+	func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
+		// get the custom reuse identifier for this annotation
+		let reuseIdentifier = "\(annotation.coordinate.longitude)"
+		// try to reuse an existing annotation image, if it exists
+		var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: reuseIdentifier)
+		
+		// if the annotation image hasn‘t been used yet, initialize it here with the reuse identifier
+		if annotationImage == nil {
+			// lookup the image for this annotation
+			let image = imageForAnnotation(annotation: annotation)
+			annotationImage = MGLAnnotationImage(image: image, reuseIdentifier: reuseIdentifier)
+		}
+		
+		return annotationImage
+	}
+
+	
+	// lookup the image to load by switching on the annotation's title string
+	func imageForAnnotation(annotation: MGLAnnotation) -> UIImage {
+		var imageName = "start_loc"
+		return UIImage(named: imageName)!
 	}
 	
 	// Allow callout view to appear when an annotation is tapped.
@@ -187,6 +216,7 @@ class CustomAnnotationView: MGLAnnotationView {
 		super.layoutSubviews()
 		
 		// Use CALayer’s corner radius to turn this view into a circle.
+		
 		layer.cornerRadius = bounds.width / 2
 		layer.borderWidth = 2
 		layer.borderColor = UIColor.white.cgColor

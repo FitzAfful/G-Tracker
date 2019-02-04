@@ -48,11 +48,26 @@ class CarsController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	
 	func getData(){
 		self.channels.removeAll()
-		print("Shit")
 		let gateway = RealmManager()
 		self.channels = gateway.getAll()
 		print(self.channels)
 		setupChannels()
+		updateChannels()
+	}
+	
+	func updateChannels(){
+		for item in self.channels {
+			APIClient.getCarDetails(channelName: item.channel_key, secretKey: item.secret_key) { (result) in
+				switch result {
+				case .success(let response):
+					var channel = response.channel
+					channel.feeds = response.feeds
+					RealmManager().save(channel: channel)
+				case .failure(let error):
+					print(error.localizedDescription)
+				}
+			}
+		}
 	}
 	
 	func setupChannels(){
